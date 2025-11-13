@@ -1,0 +1,9 @@
+[project]
+name = "cinema-de-la-cite"
+version = "0.1.0"
+description = "Projet 2 Data Analyst WildCodeSchool"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pytest>=9.0.1",
+]
