@@ -11,6 +11,8 @@ python -m venv .venv
 ### Git Bash / WSL / macOS / Linux
 source .venv/bin/activate
 
+# Désactiver l’environnement
+deactivate
 
 # Gestion des packages
 ## Initialiser un projet
