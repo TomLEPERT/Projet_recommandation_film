@@ -1,0 +1,11 @@
+# Environnements virtuels
+.venv/
+
+# Cache Python
+**/__pycache__/
+*.pyc
+*.egginfo
+
+# Fichiers de configuration ou logs
+.env
+*.log
