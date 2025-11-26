@@ -11,4 +11,4 @@
 *.log
 
 # Data trop lourd
-/data/row/tmdb_full.csv
+/data/row/*
