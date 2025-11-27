@@ -5,6 +5,7 @@ description = "Projet 2 Data Analyst WildCodeSchool"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "duckdb>=1.4.2",
     "jupyter>=1.1.1",
     "numpy>=2.3.5",
     "pandas>=2.3.3",
