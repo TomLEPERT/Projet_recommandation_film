@@ -25,7 +25,7 @@ Git Bash / macOS / Linux
 ```
 
 ```bash
-source .venv/bin/activate
+source .venv/Scritps/activate
 ```
 
 ### Installer les dépendances
