@@ -6,7 +6,6 @@ SRC_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 if SRC_DIR not in sys.path:
     sys.path.insert(0, SRC_DIR)
 
-from components.sidebar import call_sidebar
 from components.search_bar import search_bar_widget
 from components.hero import hero_section
 from features.random_movies import load_random_movies
@@ -18,10 +17,13 @@ CSV_PATH = os.path.join(
     BASE_DIR,
     "cinema_de_la_cite",
     "data",
-    "tmdb_processed.csv"
+    "tmdb_final_V3.csv"
 )
 
-st.set_page_config(page_title="Cinéma de la cité", layout="wide")
+st.set_page_config(
+    page_title="Cinéma de la cité",
+    layout="wide"
+)
 
 # ========= CSS global =========
 st.markdown(
@@ -60,7 +62,6 @@ if "selected_movie" not in st.session_state:
     st.session_state.selected_movie = None
 
 # ========= UI =========
-call_sidebar()
 hero_section()
 
 # ========= RANDOM MOVIES =========

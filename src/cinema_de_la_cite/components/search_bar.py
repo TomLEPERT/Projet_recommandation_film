@@ -10,7 +10,7 @@ from components.stiker import call_stiker
 from features.utils import select_movie
 
 
-def search_bar_widget(csv_path="data/tmdb_processed.csv", columns_per_row=4, page_size=8):
+def search_bar_widget(csv_path="data/tmdb_final_V3.csv", columns_per_row=4, page_size=8):
 
     # =========================
     # ÉTAT GLOBAL
