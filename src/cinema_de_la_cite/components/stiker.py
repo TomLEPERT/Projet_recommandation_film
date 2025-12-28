@@ -1,24 +1,72 @@
 import streamlit as st
 from typing import List
+import streamlit.components.v1 as components
 
-def call_stiker(title: str, img: str, 
-                productor: List[str], actors: List[str], 
-                writters: str, years: int, 
-                resumer: str, imbdbid: int):
-    hover_html = f"""
-    <div style="position: relative; width: 200px; height: 300px;">
-        <img src="{img}" style="width: 100%; height: 100%;">
-        <div style="
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background-color: black; color: white; opacity: 0; padding: 10px;
-        " class="hover-info">
-            <b>De :</b> {', '.join(productor)}<br>
-            <b>Par :</b> {writters}<br>
-            <b>Avec :</b> {', '.join(actors)}<br>
-            <b>Année :</b> {years}<br>
-            <b>Note IMDB :</b> {imbdbid}
-        </div>
+def call_stiker(
+    title: str,
+    img: str,
+    productor: List[str],
+    actors: List[str],
+    writters: str,
+    years: int,
+    resumer: str,
+    imbdbid: str
+):
+    html = f"""
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.movie-sticker {{
+    position: relative;
+    width: 200px;
+    height: 300px;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+}}
+
+.movie-sticker img {{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}}
+
+.movie-hover {{
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    color: white;
+    opacity: 0;
+    padding: 12px;
+    transition: opacity 0.3s ease;
+    font-size: 0.85rem;
+}}
+
+.movie-sticker:hover img {{
+    transform: scale(1.05);
+}}
+
+.movie-sticker:hover .movie-hover {{
+    opacity: 1;
+}}
+</style>
+</head>
+
+<body>
+<div class="movie-sticker">
+    <img src="{img}" />
+    <div class="movie-hover">
+        <h4>{title}</h4>
+        <p>
+            <b>Production :</b> {", ".join(productor[:2])}<br>
+            <b>Acteurs :</b> {", ".join(actors[:3])}<br>
+            <b>Année :</b> {years}
+        </p>
     </div>
-    <style>div:hover .hover-info {{opacity: 1;}}</style>
-    """
-    st.markdown(hover_html, unsafe_allow_html=True)
+</div>
+</body>
+</html>
+"""
+    components.html(html, height=320)
