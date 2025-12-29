@@ -6,12 +6,12 @@ Application de recommandation de films – Streamlit
 ## Présentation du projet
 Cinéma de la Cité est une application web développée avec Streamlit qui permet :
 
-🔍 De rechercher des films selon plusieurs critères
-🎞️ D’afficher des fiches films détaillées (affiche, synopsis, acteurs, production…)
-⭐ De consulter la note moyenne du film
-🤖 D’obtenir des recommandations de films similaires grâce à un algorithme de machine learning
-🎲 De découvrir des films aléatoires au chargement de l’application
-📊 D’explorer la base de données via des visualisations (page dédiée)
+- 🔍 De rechercher des films selon plusieurs critères
+- 🎞️ D’afficher des fiches films détaillées (affiche, synopsis, acteurs, production…)
+- ⭐ De consulter la note moyenne du film
+- 🤖 D’obtenir des recommandations de films similaires grâce à un algorithme de machine learning
+- 🎲 De découvrir des films aléatoires au chargement de l’application
+- 📊 D’explorer la base de données via des visualisations (page dédiée)
 
 Le projet repose sur une base de données issue de TMDB / IMDb, enrichie et nettoyée, et vise à proposer des films français avec une  note de popularité supérieur ou égal à 6.
 
