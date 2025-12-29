@@ -10,8 +10,11 @@ def call_stiker(
     writters: str,
     years: int,
     resumer: str,
-    imbdbid: str
+    imbdbid: str,
+    note: float | None = None,
 ):
+    note_html = f"<b>Note :</b> ⭐ {round(note,1)} / 10<br>" if note is not None else ""
+    
     html = f"""
 <!DOCTYPE html>
 <html>
@@ -60,6 +63,7 @@ def call_stiker(
     <div class="movie-hover">
         <h4>{title}</h4>
         <p>
+            {note_html}
             <b>Production :</b> {", ".join(productor[:2])}<br>
             <b>Acteurs :</b> {", ".join(actors[:3])}<br>
             <b>Année :</b> {years}

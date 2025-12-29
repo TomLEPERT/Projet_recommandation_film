@@ -31,6 +31,9 @@ def movie_card(movie: dict):
             <p style="color:#9ca3af;">
                 {movie['year']} • {", ".join(movie['genres'])}
             </p>
+            <p style="color:#facc15; font-size:1.1rem;">
+                ⭐ {movie['note']:.1f} / 10
+            </p>
             """,
             unsafe_allow_html=True
         )
@@ -98,5 +101,6 @@ def movie_card(movie: dict):
                     writters=", ".join(reco_movie["writers"]),
                     years=reco_movie["year"],
                     resumer=reco_movie["summary"],
-                    imbdbid=reco_movie["imdb_id"]
+                    imbdbid=reco_movie["imdb_id"],
+                    note=reco_movie["note"],
                 )

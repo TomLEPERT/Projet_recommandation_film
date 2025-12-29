@@ -35,5 +35,6 @@ def random_movies_section():
                 writters=", ".join(movie["writers"]),
                 years=movie["year"],
                 resumer=movie["summary"] or "",
-                imbdbid=movie["imdb_id"]
+                imbdbid=movie["imdb_id"],
+                note=movie["note"],
             )
