@@ -78,3 +78,4 @@ if movie:
 if st.session_state.selected_movie:
     st.divider()
     movie_card(st.session_state.selected_movie)
+
