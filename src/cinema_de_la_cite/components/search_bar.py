@@ -174,7 +174,8 @@ def search_bar_widget(csv_path="data/tmdb_final_V3.csv", columns_per_row=4, page
                 writters=", ".join(movie["writers"]),
                 years=movie["year"],
                 resumer=movie["summary"] or "",
-                imbdbid=movie["imdb_id"]
+                imbdbid=movie["imdb_id"],
+                note=movie["note"],
             )
 
     return None
