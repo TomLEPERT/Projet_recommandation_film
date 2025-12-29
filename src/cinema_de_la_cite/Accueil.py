@@ -6,11 +6,11 @@ SRC_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 if SRC_DIR not in sys.path:
     sys.path.insert(0, SRC_DIR)
 
-from components.search_bar import search_bar_widget
-from components.hero import hero_section
-from features.random_movies import load_random_movies
-from components.random_movies_section import random_movies_section
-from components.movie_card import movie_card
+from cinema_de_la_cite.components.search_bar import search_bar_widget
+from cinema_de_la_cite.components.hero import hero_section
+from cinema_de_la_cite.features.random_movies import load_random_movies
+from cinema_de_la_cite.components.random_movies_section import random_movies_section
+from cinema_de_la_cite.components.movie_card import movie_card
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CSV_PATH = os.path.join(
