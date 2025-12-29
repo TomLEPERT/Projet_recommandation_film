@@ -1,6 +1,6 @@
 # Projet Python – Cinéma de la Cité
 
-Application de recommandation de films – Streamlit
+Application de recommandation de films – https://cinemadelacite.streamlit.app/
 ---
 
 ## Présentation du projet
